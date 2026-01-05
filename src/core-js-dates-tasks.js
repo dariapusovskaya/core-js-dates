@@ -227,7 +227,7 @@ function getWeekNumberByDate(date) {
   const firstDayOfYear = new Date(thursday.getFullYear(), 0, 1);
   const firstDayOfYearWeekday = firstDayOfYear.getDay();
   const isoFirstDayOfYearWeekday =
-  firstDayOfYearWeekday === 0 ? 6 : firstDayOfYearWeekday - 1; 
+    firstDayOfYearWeekday === 0 ? 6 : firstDayOfYearWeekday - 1;
   let daysToFirstThursday = 3 - isoFirstDayOfYearWeekday;
   if (daysToFirstThursday < 0) {
     daysToFirstThursday += 7;
@@ -287,9 +287,11 @@ function getQuarter(date) {
   const month = date.getMonth();
   if (month >= 0 && month <= 2) {
     return 1;
-  } if (month >= 3 && month <= 5) {
+  }
+  if (month >= 3 && month <= 5) {
     return 2;
-  } if (month >= 6 && month <= 8) {
+  }
+  if (month >= 6 && month <= 8) {
     return 3;
   }
   return 4;
